@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML, CSS and JavaScript demo</title>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<!-- Start your code here -->
+
+<div class="sizes">
+  <label>
+    <input type="radio" name="size" value="l" checked onchange='onChange(this)'>
+    Размер L
+  </label>
+  <label>
+    <input type="radio" name="size" value="m" onchange='onChange(this)'>
+    Размер M
+  </label>
+  <label>
+    <input type="radio" name="size" value="s" onchange='onChange(this)'>
+    Размер S
+  </label>
+</div>
+
+<div class="card size_l" id="card">
+  <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_48/1640739/ss-at-150614-tease_b4cbe6211d07b5423b2e5978e0d25fff.jpg" class="photo">
+  <div class="info">
+    <h3>Енот-полоскун</h3>
+    <p>🗺&nbsp; ЕвропаПлюс</p>
+    <p>🚇&nbsp; Кудыкина гора</p>
+  </div>
+  <div class="price" contenteditable="true">
+    💲 от 5 600 / аукцион
+  </div>
+  <div class="description">
+    Стирает, готовит, приносит продукты в дом (не спрашивайте откуда). Сначала хотели зажарить, но енот оказался слишком полезным, и решили отдать в добрые (и богатые) руки. 
+  </div>
+  <div class="actions">
+    <button type="button">📞</button>
+    <button type="button">❤️</button>
+  </div>
+  <div class="date" contenteditable="true">
+    06.12.2024
+  </div>
+</div>
+
+<script>
+function onChange(element) {
+  const card = document.getElementById('card');
+  card.classList.remove('size_l', 'size_m', 'size_s');
+  card.classList.add('size_' + element.value);
+}
+</script>
+
+
+<!-- End your code here -->
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
